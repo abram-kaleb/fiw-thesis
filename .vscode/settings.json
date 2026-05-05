@@ -1,0 +1,165 @@
+{
+  "editor.insertSpaces": true,
+  "[latex]": {
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2
+  },
+  "files.exclude": {
+    "*.acn": true,
+    "*.acr": true,
+    "*.alg": true,
+    "*.bbl": true,
+    "*.ggl": true,
+    "*.glo": true,
+    "*.gls": true,
+    "*.ist": true,
+    "*.lol": true,
+    "*.run.xml": true,
+    "*.slg": true,
+    "*.syg": true,
+    "*.syi": true,
+    "*.aux": true,
+    "*.idx": true,
+    "*.ilg": true,
+    "*.ind": true,
+    "*.loa": true,
+    "*.iof": true,
+    "*.lof": true,
+    "*.lot": true,
+    "*.log": true,
+    "*.out": true,
+    "*.blg": true,
+    "*.glg": true,
+    "*.toc": true,
+    "*.bcf": true,
+    "*.synctex.gz": true,
+    "*.synctex(busy)": true,
+    "*.fdb_latexmk": true,
+    "*.fls": true,
+    "*.pyg": true,
+    "*-blx.bib": true,
+    "_minted-*": true
+  },
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.bbl",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.aux",
+    "*.blg",
+    "*.idx",
+    "*.ilg",
+    "*.ind",
+    "*.loa",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.lol",
+    "*.run.xml",
+    "*.slg",
+    "*.syg",
+    "*.syi",
+    "*.synctex.gz",
+    "*.synctex(busy)",
+    "*.nlo",
+    "*.bcf",
+    "*.log",
+    "*.toc",
+    "*-blx.bib",
+    "*.fdb_latexmk",
+    "*.fls",
+    "_minted-*/**",
+    "_minted-*/",
+    "*.pyg",
+  ],
+  "latex-workshop.latex.texDirs": [
+    "%DIR%/kapitel/**/*.tex",
+    "%DIR%/anlagen/**/*.tex",
+    "%DIR%/verzeichnisse/**/*.tex"
+  ],
+  "latex-workshop.latex.rootFile.indicator": "\\begin{document}",
+  "latex-workshop.latex.search.rootFiles.include": [
+    "*.tex"
+  ],
+  "latex-workshop.formatting.latexindent.args": [
+    "-c",
+    "%DIR%/",
+    "%TMPFILE%",
+    "-y=defaultIndent:'  '"
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory=%OUTDIR%",
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "makeglossaries",
+      "command": "makeglossaries",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Quick Build",
+      "tools": [
+        "lualatex"
+      ]
+    },
+    {
+      "name": "Bibliography",
+      "tools": [
+        "biber"
+      ]
+    },
+    {
+      "name": "Glossaries",
+      "tools": [
+        "makeglossaries"
+      ]
+    },
+    {
+      "name": "Full Build",
+      "tools": [
+        "lualatex",
+        "biber",
+        "makeglossaries",
+        "lualatex",
+        "lualatex",
+        "lualatex"
+      ]
+    },
+  ],
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.build.rootfileInStatus": true,
+  "latex-workshop.latex.build.forceRecipeUsage": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.latex.build.clearLog.everyRecipeStep.enabled": false,
+  // replace "never" with "onSave" if you want to compile the project after saving; not recommended for large projects!
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "cSpell.language": "en,de",
+  "makefile.configureOnOpen": false,
+}

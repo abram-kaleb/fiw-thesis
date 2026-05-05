@@ -1,0 +1,204 @@
+{
+  "Section": {
+    "prefix": "sec",
+    "body": [
+      "\\section{${1:Überschrift}}",
+      "\\label{sec:${2:label}}",
+      "$0"
+    ],
+    "description": "Section mit Label"
+  },
+
+  "Subsection": {
+    "prefix": "subsec",
+    "body": [
+      "\\subsection{${1:Überschrift}}",
+      "\\label{subsec:${2:label}}",
+      "$0"
+    ],
+    "description": "Subsection mit Label"
+  },
+
+  "Subsubsection": {
+    "prefix": "subsubsec",
+    "body": [
+      "\\subsubsection{${1:Überschrift}}",
+      "\\label{subsubsec:${2:label}}",
+      "$0"
+    ],
+    "description": "Subsubsection mit Label"
+  },
+
+  "Bild": {
+    "prefix": "fig",
+    "body": [
+      "\\begin{figure}[${1|!htbp,h,t,b,p,H|}]",
+      "  \\begin{center}",
+      "    \\includegraphics[width=${4:\\linewidth}]{${2:bilder}/${3:Dateiname}.${5|pdf,png,jpg|}}",
+      "    \\caption[${6:Kurzfassung}]{${7:Lange Bildunterschrift}}",
+      "    \\label{fig:${8:$3}}",
+      "  \\end{center}",
+      "\\end{figure}",
+      "$0"
+    ],
+    "description": "Bild einfügen"
+  },
+
+  "Formel": {
+    "prefix": "eq",
+    "body": [
+      "\\begin{equation}\\label{eq:${1:Formelname}}",
+      "  ${2:c = \\sqrt{a^2 + b^2}}",
+      "\\end{equation}",
+      "$0"
+    ],
+    "description": "Formel einfügen"
+  },
+
+  "Mehrere Gleichungen": {
+    "prefix": "al",
+    "body": [
+      "\\begin{align}\\label{eq:${1:label}}",
+      "  ${2:a} &= ${3:b} \\\\\\\\",
+      "  ${4:c} &= ${5:d}",
+      "\\end{align}",
+      "$0"
+    ],
+    "description": "Align-Umgebung für mehrere Gleichungen mit Label"
+  },
+
+  "Tabelle": {
+    "prefix": "tbl",
+    "body": [
+      "\\begin{table}[${1|!htbp,h,t,b,pH|}]",
+      "  \\begin{center}",
+      "    \\caption[${2:Kurzfassung}]{${3:Lange Tabellenüberschrift}}",
+      "    \\label{tab:${4:label}}",
+      "    \\begin{tabular}{${5:|ll|}}",
+      "      \\hline",
+      "      ${6:Kopf 1} & ${7:Kopf 2} \\\\\\\\",
+      "      \\hline",
+      "      ${8:Zelle 1} & ${9:Zelle 2} \\\\\\\\",
+      "      \\hline",
+      "    \\end{tabular}",
+      "  \\end{center}",
+      "\\end{table}",
+      "$0"
+    ],
+    "description": "Tabelle einfügen"
+  },
+
+  "Itemize": {
+    "prefix": "itm",
+    "body": [
+      "\\begin{itemize}",
+      "  \\item ${1:Erstes Element}",
+      "  \\item ${2:Zweites Element}",
+      "\\end{itemize}",
+      "$0"
+    ],
+    "description": "Itemize-Umgebung einfügen"
+  },
+
+  "Enumerate": {
+    "prefix": "enm",
+    "body": [
+      "\\begin{enumerate}",
+      "  \\item ${1:Erstes Element}",
+      "  \\item ${2:Zweites Element}",
+      "\\end{enumerate}",
+      "$0"
+    ],
+    "description": "Enumerate-Umgebung einfügen"
+  },
+
+  "Description": {
+    "prefix": "dsc",
+    "body": [
+      "\\begin{description}",
+      "  \\item[${1:Erstes Element}] ${2:Erste Beschreibung}",
+      "  \\item[${3:Zweites Element}] ${2:Zweite Beschreibung}",
+      "\\end{description}",
+      "$0"
+    ],
+    "description": "Describe-Umgebung einfügen"
+  },
+
+  "Zitat": {
+    "prefix": "quo",
+    "body": [
+      "\\begin{quote}",
+      "  ${1:Zitat}",
+      "  \\begin{flushright}",
+      "    --- ${2:Autor} \\cite{${3:ref}}",
+      "  \\end{flushright}",
+      "\\end{quote}",
+      "$0"
+    ],
+    "description": "Zitat einfügen"
+  },
+
+  "Fett": {
+    "prefix": "bf",
+    "body": [
+      "\\textbf{${1:Text}}"
+    ],
+    "description": "Fett gedruckter Text"
+  },
+
+  "Kursiv": {
+    "prefix": "it",
+    "body": [
+      "\\textit{${1:Text}}"
+    ],
+    "description": "Kursiver Text"
+  },
+
+  "Monospace": {
+    "prefix": "tt",
+    "body": [
+      "\\texttt{${1:Text}}"
+    ],
+    "description": "Monospace Text"
+  },
+
+  "Smallcaps": {
+    "prefix": "sc",
+    "body": [
+      "\\textsc{${1:Text}}"
+    ],
+    "description": "Smallcaps Text"
+  },
+
+  "Farbig": {
+    "prefix": "ct",
+    "body": [
+      "\\textcolor{${1|red,blue,green,cyan,magenta,yellow,black,white,gray,orange,purple,brown|}}{${2:Text}}"
+    ],
+    "description": "Farbiger Text"
+  },
+
+  "Hochgestellt": {
+    "prefix": "sup",
+    "body": [
+      "\\textsuperscript{${1:Hochgestellter Text}}"
+    ],
+    "description": "Hochgestellter Text (ohne Mathemodus)"
+  },
+
+  "Tiefgestellt": {
+    "prefix": "sub",
+    "body": [
+      "\\textsubscript{${1:Tiefgestellter Text}}"
+    ],
+    "description": "Tiefgestellter Text (ohne Mathemodus)"
+  },
+
+  "Unterstrichen": {
+    "prefix": "ul",
+    "body": [
+      "\\underline{${1:Text}}"
+    ],
+    "description": "Unterstrichener Text"
+  }
+}

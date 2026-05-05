@@ -1,0 +1,60 @@
+\chapter{Introduction}
+\label{introduction}
+
+This chapter explains the foundation for this research, which is structured into four main sections. The first section presents the background to the maritime industry's digital transformation, followed by an identification of operational challenges in current ship maintenance strategies. Next, the chapter details the research limitations and objectives to be achieved through the development of the Digital Twin framework. It concludes with an explanation of the overall thesis writing methodology.
+
+% 1.1
+\section{Research Background}
+\label{section:research-background}
+
+The shipping industry is experiencing transformations fueled by advancements in technology, environmental goals and more rigorous safety standards. The IMO intends to cut GHG emissions by 40\% by 2030 and peak GHG emissions from international shipping as soon as possible and to reach net-zero GHG emissions by or around close to 2050 \cite{IMO2023}. Classification bodies, like DNV, ABS and Lloyd’s Register are updating their regulations to support condition-based inspections, remote evaluations and compliance driven by data \cite{ABS2022}. As a result ship operators need to prove that maintenance procedures are dependably clear and backed by information, over the entire lifespan of the vessel.
+
+Traditional maintenance depends on planned servicing and routine checks. Research shows that numerous equipment breakdowns result from maintenance and could be prevented by condition-based or predictive techniques \cite{Madusanka2023}. Real operating environments fluctuate considerably because of variations in load, surroundings and duty patterns frequently leading to maintenance that's either too early or too late. The expanding adoption of condition-based monitoring and remote evaluation emphasizes the drawbacks of approaches and the rising demand for ongoing dependable operational information \cite{Assani2022}.
+
+Technologies like IoT, AI and Digital Twin (DT) have demonstrated benefits in manufacturing, energy and aerospace industries. Predictive maintenance powered by DT can minimize downtime, lower maintenance expenses and slow equipment wear \cite{Miao2024}. Nonetheless their use in the industry is still scarce because of diverse onboard systems, a lack of adequate sensors and difficulties in integrating old assets with modern digital technologies \cite{Wang2022}.
+
+While other industries have shifted toward predictive and prescriptive maintenance, maritime operations largely remain dependent on preventive and reactive strategies \cite{Wang2022}. This gap reflects issues in data infrastructure, decision-support mechanisms, operator readiness, and verification processes. Accordingly, there is a need for a structured Digital Twin framework that can support the transition toward condition-based and predictive maintenance while remaining feasible for current maritime systems \cite{Kalafatelis2025}.
+
+% 1.2
+\section{Problem Statement}
+\label{section:problem-statement}
+
+Despite growing interest in Digital Twin technologies their use for enhancing maintenance, in operations is still scattered. Current maintenance approaches depend largely on fixed timetables, which do not represent the state of vital components. This results in either maintenance causing wasted resources or postponed action leading to unplanned downtime.
+
+A key difficulty lies in the lack of a Digital Twin system that combines sensor data collection, straightforward virtual modeling, forecasting analytics and decision-making assistance. In the absence of this system the organized application of data-driven maintenance, at the vessel or fleet scale continues to be challenging.
+
+Technical challenges consist of sensor options, diverse onboard systems and issues with compatibility. Organizational limitations, including expertise and reluctance to embrace new technology additionally obstruct implementation. Since propulsion engines and auxiliary machinery are crucial, for safety maintenance choices need to comply with classification standards.
+
+Current monitoring solutions frequently struggle to transform raw sensor data into insights like degradation evaluation or estimates of remaining useful life. This thesis addresses these issues by developing an executable and simplified Digital Twin framework for predictive maintenance, constrained to laboratory-scale validation. The method emphasizes techniques for data collection, digital modeling and trend-oriented predictive analysis utilizing the existing sensor setup. Therefore, the research questions are formulated as follows:
+
+\begin{enumerate}
+    \item What approach can be used to design a Digital Twin framework that supports maintenance in maritime operations?
+    \item What are the key elements and integration layers required to enable data acquisition, virtual representation, and maintenance-related decision support?
+    \item How can the framework demonstrate feasibility for safety-related systems using laboratory-scale equipment?
+\end{enumerate}
+
+
+% 1.3
+\section{Scope and Objectives}
+\label{section:scope-and-objectives}
+
+The following aspects should be considered in particular:
+\begin{enumerate}
+    \item The work focuses on the development of a Digital Twin framework for supporting maintenance activities. The implementation includes data acquisition, virtual representation, and predictive assessment but excludes real-ship deployment or fleet-level integration.
+    \item Validation is restricted to a single machinery unit at laboratory scale. Sensor availability, data resolution, and system complexity follow the constraints of the laboratory equipment.
+    \item Predictive maintenance is addressed using machine learning-based assessments to identify potential failures.
+\end{enumerate}
+
+The aim of this thesis is to:
+\begin{enumerate}
+    \item Develop a framework that links physical machinery with a virtual representation to support maintenance-related monitoring and decision-making.
+    \item Define data-flow mechanisms between the equipment and the Digital Twin to enable reliable condition observation and predictive assessment.
+    \item Demonstrate the feasibility of condition-based and predictive maintenance concepts on laboratory-scale equipment while preserving applicability to marine systems
+\end{enumerate}
+
+
+% 1.4
+\section{Thesis Structure}
+\label{section:thesis-structure}
+
+Chapter 1 presents the background, defines the problem, outlines the scope and states the objectives. Chapter 2 reviews ship maintenance strategies, Digital Twin concepts, predictive maintenance methods, and maritime-specific implementation challenges. Chapter 3 outlines the research methods, the design principles of the framework and the standards, for evaluation. Chapter 4 outlines the validation of the proposed Digital Twin framework, components, and process. Chapter 5 covers the expected advantages, constraints and relevance of the framework. Chapter 6 concludes the study, highlights key contributions, and identifies directions for future research, including potential expansion toward maritime systems.

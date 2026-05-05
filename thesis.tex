@@ -1,0 +1,190 @@
+\documentclass[en]{fiwthesis}
+% \documentclass[bild]{fiwthesis}  %% Bildunterschriften standardmäßig mit "Bild" statt "Abb."
+% \documentclass[en]{fiwthesis}    %% Default language is German but can be switched to English
+
+%% =====================
+%%  Pakete(mpfehlungen)
+%% =====================
+
+\usepackage{lipsum}
+
+\usepackage{siunitx}             %% Einheitliches Setzen von SI-Einheiten
+\usepackage{textgreek}           %% Griechische Buchstaben außerhalb des Math-Mode
+\usepackage{amsmath}             %% Zentrierte Formeln
+\usepackage{amssymb}             %% Erweiterter Formelsatz mathem. Symbole
+
+\usepackage{tabularray}          %% Konfigurierbare Tabellenumgebung
+
+\usepackage{graphicx}            %% Ermöglicht das Einbinden von Grafiken
+\usepackage{subcaption}          %% Mehrere Bilder in einem Bild
+
+\usepackage{tikz}                %% Grafiken direkt in LaTeX erstellen
+\usepackage{pgfplots}            %% Diagramme erstellen und Daten plotten
+\usetikzlibrary{positioning}     %% Verbesserte Lagebezeichnung in TikZ
+\usetikzlibrary{shapes}          %% Typische Formen wie Rechtecke, Ellipsen
+\usetikzlibrary{intersections}   %% Schnittpunkt von Geraden adressieren
+
+\pgfplotsset{compat=1.18}
+
+%% ===========
+%%  Metadaten
+%% ===========
+
+\thesis{Master-Thesis}
+\title{Development of a Digital Twin Framework for Predictive maintenance in Maritime Systems}
+\date{05.05.2026}
+
+%% Angabe von Matrikelnummer, Name, Geburtsdatum und Geburtsort
+\author{Abraham Kaleb Martua Manulang}{344924}{12.04.2001}{Bekasi}
+\supervisor{Prof. Dr.-Ing. Jean Rom Rabe}
+\secsupervisor{Prof. Dr.-Ing. Ulrich Förster	}
+\keywords{Logik, Mathematik}
+
+%% Metadaten in die PDF-Datei schreiben
+\makepdfmetadata
+
+%% ==========
+%%  Präambel
+%% ==========
+
+%% Bibliographie einbinden
+\bibliography{quellen}
+
+%% Glossar einbinden
+\input{verzeichnisse/glossar}
+
+%% Abkürzungen einbinden
+\input{verzeichnisse/abkuerzungen}
+
+%% Symbole einbinden
+\input{verzeichnisse/symbole}
+
+%% Glossar und Abkürzungsverzeichnis erstellen
+\makeglossaries{}
+
+%% Index erzeugen
+\makeindex[
+  intoc=true,
+  title=Index,
+  columns=2]{}
+\indexsetup{headers={\indexname}{\indexname}}
+
+%% ===============
+%%  Beginn Thesis
+%% ===============
+
+\begin{document}
+
+%% ============
+%%  "Vorspann"
+%% ============
+
+%% Optional: römische Seitenzahlen bis zum Ende des Inhaltsverzeichnisses;
+%% wenn gewünscht, dann auch Makro `\mainmatter` weiter unten beachten!
+% \frontmatter
+
+%% Titelseite
+\maketitle
+
+%% Aufgabenstellung
+\maketask{\input{kapitel/aufgabenstellung}}
+
+%% Abstract
+\makeabstract{
+  A maximum of half a page.
+}{
+  English Version.
+}
+
+%% Inhaltsverzeichnis (Schalter `compact` sorgt für einfachen Zeilenabstand)
+\maketoc[compact]
+
+%% ==========
+%%  Textteil
+%% ==========
+
+%% Optional; siehe `\frontmatter` oben
+% \mainmatter
+
+%% Einleitung
+\input{kapitel/1_introduction.tex}
+
+%% weitere Kapitel hier jeweils einzeln einbinden
+\input{kapitel/2_literature-review.tex}
+
+%% Schluss
+\input{kapitel/3_methodology.tex}
+
+%% =========
+%%  Anlagen
+%% =========
+
+\begin{appendices}
+
+  \input{anlagen/beispiel}
+
+\end{appendices}
+
+%% ===============
+%%  Verzeichnisse
+%% ===============
+
+%% Verzeichnisse mit einzeiligem Zeilenabstand
+\singlespacing
+
+%% Literaturverzeichnis
+\listofreferences
+
+%% Abbildungsverzeichnis einfügen
+\listoffigures
+
+%% Tabellenverzeichnis einfügen
+\listoftables
+
+%% Quelltextverzeichnis einfügen
+\listoflistings
+
+%% Abkürzungsverzeichnis
+\listofacronyms
+
+%% Symbolverzeichnis
+\listofsymbols
+
+%% Falls ein anderer Glossar-Stil genutzt wird und die zweite Spalte zu schmal ist:
+% \setlength{\glsdescwidth}{0.8\linewidth}
+
+%% Glossar einfügen
+\printglossary
+
+%% Index einfügen
+\printindex
+
+%% Zeilenabstand wieder auf 1,5-fachen Zeilenabstand umschalten
+\normalspacing
+
+%% =========================================
+%%  Selbstständigkeitserklärung, CD, Thesen
+%% =========================================
+
+%% Inhalt der CD, Speicherkarte oder des USB-Sticks; nur für gedruckte Version relevant
+\makecd{\input{anlagen/cd}}
+
+%% Selbstständigkeitserklärung
+\makedoiw
+
+%% Thesen (allerletzte Seite); Thesen bitte immer durch Semikolons trennen
+\maketheses{%
+  These 1;
+  These 2;
+  These 3;
+  These 4;
+  These 5;
+  These 6
+}
+
+\end{document}
+
+%% =============
+%%  Ende Thesis
+%% =============
+
